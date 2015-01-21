@@ -1,7 +1,7 @@
 ## The following two functions create a matrix object that can 
 ## cache its inverse using the solve function.
 
-## Creates a special matrix object, which is really 
+## Creates a special matrix object, which is really an array containing a function
 
 makeCacheMatrix <- function(x = matrix()) {
     
@@ -24,6 +24,7 @@ makeCacheMatrix <- function(x = matrix()) {
     list(set = set, get = get,
          setinverse = setinverse,
          getinverse = getinverse)
+    
 }
 
 
