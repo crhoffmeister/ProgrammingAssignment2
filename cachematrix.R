@@ -18,8 +18,9 @@ makeCacheMatrix <- function(x = matrix()) {
     # Set the inverse of the matrix
     setinverse <- function(solve) i <<- solve
     
-    # Get the inverse of the inverse
+    # Get the inverse of the matrix
     getinverse <- function() i
+    
     list(set = set, get = get,
          setinverse = setinverse,
          getinverse = getinverse)
@@ -31,7 +32,7 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
     
     # Check to see if inverse has been created
-    i <- x$getmean()
+    i <- x$getinverse()
     
     # If so, it gets the inverse from the cache
     if(!is.null(i)) {
